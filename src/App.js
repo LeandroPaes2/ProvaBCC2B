@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState, createContext } from "react";
-import { Provider } from "react-redux"; // Importando o Provider do Redux
-import store from "./redux/store"; // Importando a store configurada
+import { Provider } from "react-redux"; 
+import store from "./redux/store"; 
 import TelaLogin from "./componentes/Telas/TelaLogin";
 import TelaCadastroUsuario from "./componentes/Telas/TelaCadastroUsuario";
 import TelaBatePapo from "./componentes/Telas/TelaBatePapo";
