@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ProvaBCC2B/static/css/main.d221dc40.css",
+    "main.js": "/ProvaBCC2B/static/js/main.d8460b9d.js",
+    "index.html": "/ProvaBCC2B/index.html",
+    "main.d221dc40.css.map": "/ProvaBCC2B/static/css/main.d221dc40.css.map",
+    "main.d8460b9d.js.map": "/ProvaBCC2B/static/js/main.d8460b9d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d221dc40.css",
+    "static/js/main.d8460b9d.js"
+  ]
+}
