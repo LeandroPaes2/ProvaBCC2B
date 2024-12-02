@@ -25,10 +25,9 @@ const TelaCadastroUsuario = () => {
             return;
         }
 
-        // Como não temos `adicionarUsuario` no reducer, você pode enviar a requisição diretamente
-        // Para o backend ou chamar a lógica de salvar de outra forma. Exemplo:
+        
         console.log("Usuário a ser adicionado:", usuario);
-        // Aqui, o backend de adição seria chamado via dispatch ou API
+        
         setUsuario({ nickname: "", avatarUrl: "", senha: "" });
     };
 
@@ -38,10 +37,7 @@ const TelaCadastroUsuario = () => {
     };
 
     const handleAtualizarUsuario = () => {
-        // Como não temos `atualizarUsuario` no reducer, você pode enviar a requisição diretamente
-        // Para o backend ou chamar a lógica de atualizar de outra forma. Exemplo:
         console.log("Usuário a ser atualizado:", usuario);
-        // Aqui, o backend de atualização seria chamado via dispatch ou API
         setUsuario({ nickname: "", avatarUrl: "", senha: "" });
         setModoEdicao(false);
     };

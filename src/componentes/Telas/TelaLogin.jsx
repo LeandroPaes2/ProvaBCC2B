@@ -1,22 +1,22 @@
 import { useContext, useState } from "react";
 import { ContextoUsuario } from "../../App";
-import { useNavigate } from "react-router-dom"; // Para navegação
+import { useNavigate } from "react-router-dom"; 
 
 export default function TelaLogin() {
   const { setUsuario } = useContext(ContextoUsuario);
   const [nickname, setNickname] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // Hook de navegação
+  const navigate = useNavigate(); 
 
   function handleLogin() {
     if (nickname && password) {
-      // Se as credenciais forem fornecidas, faz o login
+      
       setUsuario({ nickname, logado: true });
-      navigate("/bate-papo"); // Redireciona para a sala de bate-papo
+      navigate("/bate-papo"); 
     } else {
-      // Se as credenciais não forem fornecidas, redireciona para o cadastro
+      
       alert("Por favor, informe as credenciais!");
-      navigate("/cadastro"); // Redireciona para a página de cadastro
+      navigate("/cadastro"); 
     }
   }
 

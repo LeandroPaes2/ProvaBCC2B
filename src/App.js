@@ -12,7 +12,7 @@ function App() {
   const [usuario, setUsuario] = useState({ nickname: "", logado: false });
 
   return (
-    <Provider store={store}> {/* Envolvendo a aplicação com o Provider do Redux */}
+    <Provider store={store}> 
       <ContextoUsuario.Provider value={{ usuario, setUsuario }}>
         <BrowserRouter>
           <Routes>
@@ -21,7 +21,7 @@ function App() {
             {usuario.logado && (
               <Route path="/bate-papo" element={<TelaBatePapo />} />
             )}
-            <Route path="/" element={<TelaLogin />} /> {/* Rota padrão de login */}
+            <Route path="/" element={<TelaLogin />} /> 
           </Routes>
         </BrowserRouter>
       </ContextoUsuario.Provider>
