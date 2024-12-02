@@ -1,10 +1,16 @@
 import { useState, useContext } from "react";
-import { ContextoUsuario } from "../../App";
+import { ContextoUsuario } from "../../App";  // Verifique se o caminho do contexto está correto
 
 export default function TelaBatePapo() {
-  const { usuario } = useContext(ContextoUsuario);
+  const { usuario } = useContext(ContextoUsuario);  // Contexto consumido corretamente
   const [mensagens, setMensagens] = useState([]);
   const [mensagem, setMensagem] = useState("");
+
+  if (!usuario.logado) {
+    // Redireciona se o usuário não estiver logado
+    window.location.href = '/login';
+    return null;
+  }
 
   function handlePostMessage() {
     if (!mensagem.trim()) {

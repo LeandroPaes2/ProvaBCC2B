@@ -12,17 +12,17 @@ function App() {
   const [usuario, setUsuario] = useState({ nickname: "", logado: false });
 
   return (
-    <Provider store={store}> {/* Envolvendo a aplicação com o Provider */}
+    <Provider store={store}> {/* Envolvendo a aplicação com o Provider do Redux */}
       <ContextoUsuario.Provider value={{ usuario, setUsuario }}>
         <BrowserRouter>
-          {usuario.logado ? (
-            <Routes>
-              <Route path="/" element={<TelaBatePapo />} />
-              <Route path="/cadastro" element={<TelaCadastroUsuario />} />
-            </Routes>
-          ) : (
-            <TelaLogin />
-          )}
+          <Routes>
+            <Route path="/login" element={<TelaLogin />} />
+            <Route path="/cadastro" element={<TelaCadastroUsuario />} />
+            {usuario.logado && (
+              <Route path="/bate-papo" element={<TelaBatePapo />} />
+            )}
+            <Route path="/" element={<TelaLogin />} /> {/* Rota padrão de login */}
+          </Routes>
         </BrowserRouter>
       </ContextoUsuario.Provider>
     </Provider>
